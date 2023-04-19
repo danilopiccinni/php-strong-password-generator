@@ -18,12 +18,11 @@ include './partials/functions.php' ;
 
     <h2>Password totalmente casuale</h2>
 
-    <form action="recuperapassword2.php">
+    <form action="visualizzapassword.php">
         <button name="randomLenght" value="<?php echo rand(5,15) ?>" type="submit">Richiedi password</button>
     </form>
 
-    <div>
-        <?php echo generatePasswordRandom(); ?>
-    </div>
+
+
 </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +18,10 @@
     <br>
     <br>
 
-    <div>
+    <!-- <div>
         <a href="recuperapassword2.php">Recupera password completamente randomica</a>
     </div>
-    
+     -->
 
     
 </body>

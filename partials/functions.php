@@ -1,7 +1,11 @@
 <?php
+
+session_start();
+
 function generatePassword() {
 
     $length = $_GET['lenght'] ?? '';
+
 
     //consideriamo i caratteri da randommizzare
     $alfaNumber = "abcdefghijlmnopqrstuvwxyzABCDEFGHIJLMNOPQRSTUVWXYZ0123456789_?*+&%!#@";
@@ -16,7 +20,7 @@ function generatePassword() {
         $passRandom .= $alfaNumber[$numberRandom];
         $i++;
     }
-
+    $_SESSION['password'] = $passRandom;
     return $passRandom;
 }
 
@@ -24,6 +28,7 @@ function generatePasswordRandom() {
 
     $length = $_GET ['randomLenght'] ?? '';
 
+
     //consideriamo i caratteri da randommizzare
     $alfaNumber = "abcdefghijlmnopqrstuvwxyzABCDEFGHIJLMNOPQRSTUVWXYZ0123456789_?*+&%!#@";
     $lenAlfaNumber = strlen($alfaNumber);
@@ -38,5 +43,6 @@ function generatePasswordRandom() {
         $i++;
     }
 
+    $_SESSION['password'] = $passRandom;
     return $passRandom;
     }
