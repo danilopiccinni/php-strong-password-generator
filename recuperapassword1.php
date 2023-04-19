@@ -1,7 +1,6 @@
 <?php
 
     include './partials/functions.php' ;
-    generatePassword();
 ?>
 
 <!DOCTYPE html>
