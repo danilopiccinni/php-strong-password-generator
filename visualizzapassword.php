@@ -1,7 +1,6 @@
 <?php 
     include './partials/functions.php' ;
-    generatePassword();
-    // generatePasswordRandom();
+
 ?>
 
 <!DOCTYPE html>
@@ -14,5 +13,7 @@
 </head>
 <body>
     <h3>la tua nuova password temporanea è: <?php echo $_SESSION['password'] ?></h3>
+
+    <a href="index.php">torna alla home</a>
 </body>
 </html>

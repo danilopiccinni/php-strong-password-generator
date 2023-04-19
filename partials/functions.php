@@ -4,24 +4,11 @@ session_start();
 
 function generatePassword() {
 
-    $length = $_GET['lenght'] ?? '';
+    $length = $_GET['lenght'];
 
-
-    //consideriamo i caratteri da randommizzare
     $alfaNumber = "abcdefghijlmnopqrstuvwxyzABCDEFGHIJLMNOPQRSTUVWXYZ0123456789_?*+&%!#@";
-    $lenAlfaNumber = strlen($alfaNumber);
-    $passRandom = "";
-    $i=0;
 
-    //vado a pescare i caratteri uno per uno finchè con raggiungo il valore di $length
-    while($i<$length) {
-        //con rand trovo l'indice casuale
-        $numberRandom = rand(0,$lenAlfaNumber-1);
-        $passRandom .= $alfaNumber[$numberRandom];
-        $i++;
-    }
-    $_SESSION['password'] = $passRandom;
-    return $passRandom;
+    return substr(str_shuffle($alfaNumber),0,$length);
 }
 
 function generatePasswordRandom() {
@@ -43,6 +30,6 @@ function generatePasswordRandom() {
         $i++;
     }
 
-    $_SESSION['password'] = $passRandom;
+
     return $passRandom;
     }

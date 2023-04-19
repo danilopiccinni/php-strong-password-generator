@@ -2,6 +2,18 @@
 
 include './partials/functions.php' ;
 
+$lenght = $_GET['randomLenght'] ?? '' ; 
+
+if($lenght != null) {
+    $passwordgenerata = generatePasswordRandom();
+
+}
+
+if(isset($passwordgenerata)) {
+    $_SESSION['password'] = $passwordgenerata;
+
+    header('Location: visualizzapassword.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +30,7 @@ include './partials/functions.php' ;
 
     <h2>Password totalmente casuale</h2>
 
-    <form action="visualizzapassword.php">
+    <form action="recuperapassword2.php">
         <button name="randomLenght" value="<?php echo rand(5,15) ?>" type="submit">Richiedi password</button>
     </form>
 
