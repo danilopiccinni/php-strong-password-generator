@@ -1,0 +1,37 @@
+h1,h2 {
+    color: black;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sign-in-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+
+    background-color: #23272a;
+    width: 500px;
+    height: 500px;
+
+    padding-top: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 50px;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
